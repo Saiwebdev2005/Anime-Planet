@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Login from "./Other/Login";
 
@@ -21,7 +21,7 @@ const NavBar = () => {
   },[buttonTrigger])
   return (
     <>
-    <nav className="relative container mx-auto p-6 ">
+    <nav className="relative container mx-auto p-6 max-w-6xl">
     <div className="flex items-center justify-between">
       <div className="flex items-center space-x-20">
         {/* Logo */}

@@ -3,8 +3,9 @@ import React from "react";
 const Ground = () => {
   return (
     <>
+    <div className="w-full bg-violet-800">
     {/* Site info about Language */}
-    <section id="stats" class="py-24 ">
+    <section id="stats" class="py-24 bg-white">
       <div className="flex flex-col relative items-center ">
         <div className="absolute -left-5 -top-7 md:-top-7 mb-10">
           <img src="\images\ds shinobu.png" alt="" className="md:w-64 md:h-86 w-64 z-0 opacity-30 md:opacity-100" />
@@ -29,7 +30,7 @@ const Ground = () => {
   </div>
   </section>
   {/* Features */}
-    <section id="feature" className="pb-32 bg-violet-800 ">
+    <section id="feature" className="pb-48 max-w-6xl mx-auto ">
       <div className="relative container flex flex-col items-start px-6 mx-auto md:flex-row md:space-x-7 space-y-10">
         {/* Horizontal line */}
         <div className="hidden absolute top-48 left-16 h-3 bg-yellow-400 md:block w-10/12"></div>
@@ -85,6 +86,7 @@ const Ground = () => {
 </div>
       </div>
     </section>
+    </div>
     </>
   )
 }

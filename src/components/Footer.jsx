@@ -6,7 +6,7 @@ const Footer = () => {
 
       {/* Footer */}
       <section id="footer" className="p-20 bg-violet-700">
-      <footer>
+      <footer className="max-w-6xl mx-auto">
         <Link to='/Contact'>
         {/* Container */}
         <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-4 justify-between">

@@ -1,10 +1,10 @@
 import React from 'react';
 function MainHeader({topAnime}) {
   return (
-    <div>
+    <div className='bg-violet-800'>
     {/* Hero content */}
     {/* Header */}
-    <div className="flex relative  items-center justify-center p-6">
+    <div className="flex relative  bg-white  items-center justify-center p-6">
     <h1 className='font-bold text-6xl text-violet-800 mx-auto text-left pt-12 pb-20'>Welcome to Anime-Planet</h1>
     {/* right */}
     <div className='hidden absolute md:block right-32 top-2 opacity-90'>
@@ -20,9 +20,9 @@ function MainHeader({topAnime}) {
     </div>
      
       {/* Content container */}
-      <div className="container mx-auto flex flex-col p-6 md:flex-row bg-violet-800">
+      <div className="container mx-auto flex flex-col justify-center items-center p-6 md:flex-row bg-violet-800 max-w-6xl">
         {/* Content */}
-        <div className="flex flex-col space-y-10 mb-44 mg:mt-16 mb:mb-52 md:w-1/2">
+        <div className="flex flex-col space-y-10 mb-44 mg:mt-16 mb:mb-52 md:w-1/2 ">
       <h1 className="text-5xl font-bold text-center md:text-6xl md:max-w-md md:text-left text-white">
         Top Anime Of this Week
       </h1>
@@ -38,43 +38,35 @@ function MainHeader({topAnime}) {
         </div>
         {/* right anime section */}
         <div className="flex flex-col justify-between space-y-6 mb-30 -mt-28 md:mt-16 w-full md:w-1/2 p-6">
-          {/* Container 1 */}
-          {topAnime.map((anime) => {
-            return (
-              <div className="flex relative flex-col items-left justify-center bg-violet-400 mx-4 mt-4 rounded-lg" key={anime.mal_id}>
+  {/* Container 1 */}
+  {topAnime.map((anime) => {
+    return (
+      <div className="flex relative flex-col items-left justify-center bg-violet-400 mx-4 mt-4 rounded-lg shadow-lg" key={anime.mal_id}>
+        <h1 className="font-bold text-center text-xl text-yellow-400 mt-4">
+          {anime.title}
+        </h1>
+        <div className="ml-4 font-medium mt-2">
+          <p className='text-white'>
+            Rating : {anime.score}
+          </p>
+          <p className='text-white'>
+            Release year : {anime.year}
+          </p>
+          <p className='text-white'>
+            Episode : {anime.episodes}
+          </p>
+        </div>
+        <button className='p-4  mb-6 left-32 md:-right-20 top-16 md:top-8 bg-violet-800 rounded-full py-2 px-4 mx-12 md:mx-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
+          <a href={anime.trailer.url} className="text-xs font-bold text-yellow-400">
+            Trailer!!!
+          </a>
+        </button>
+      </div>
+    )
+  })}
+</div>
 
-              <h1 className="font-bold text-center text-xl text-yellow-400">
-                {anime.title}
-              </h1>
-              <div className="ml-4 font-medium">
-              <p className='text-white'>
-                Rating : {anime.score}
-              </p>
-              <p className='text-white'>
-                Release year : {anime.year}
-              </p>
-              <p className='text-white'>
-                Episode : {anime.episodes}
-              </p>
-              </div>
-              <button className='p-4 absolute left-32 md:-right-20 top-16 md:top-8 bg-violet-800 rounded-full py-2 px-4 mx-12 md:mx-32'>
-                <a href={anime.trailer.url} className="text-xs text-bold text-yellow-400">
-                  Trailer!!!
-                </a>
-              </button>
-             </div>
-            //  release year = year
-            //  episode = episodes
-            //  rating = score
-            )
-          })}
-           
         </div>
-        </div>
-        {/* Top anime */}
-       
-       
-      
     </div>
   )
 }

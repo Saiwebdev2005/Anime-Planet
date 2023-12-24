@@ -1,11 +1,11 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <>
     {/* Hero Section */}
     <section id="hero">
-      <div className="container mx-auto flex flex-col-reverse p-6 md:flex-row ">
+      <div className="container mx-auto max-w-6xl flex flex-col-reverse p-6 md:flex-row ">
         {/* Content */}
         <div className="flex flex-col space-y-10 mb-44 mg:mt-16 mb:mb-52 md:w-1/2">
       <h1 className="text-5xl font-bold text-center md:text-6xl md:max-w-md md:text-left font-sans">
@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
         {/* Image */}
         <div className="mb-24 mx-auto md:w-92 md:mb-0 md:w-1/2">
-         <img src="\images\akatski.png" alt="" class="md:w-78 md:ml-30" />
+         <img src="\images\akatski.png" alt="" className="md:w-78 md:ml-30" />
         </div>
       </div>
     </section>
